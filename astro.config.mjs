@@ -8,5 +8,10 @@ import studiocmsUi from '@studiocms/ui';
 export default defineConfig({
   output: "static",
   integrations: [studiocmsUi()],
-  site: "https://www.th-dd.top"
+  site: "https://www.th-dd.top",
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp'
+    }
+  }
 });
