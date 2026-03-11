@@ -1,12 +1,12 @@
 {
   "profile": {
     "name": "叹号大帝",
-    "description": "也可以叫我叹号"
+    "description": "🤫也可以叫我叹号🤫"
   },
   "about": {
     "title": "关于我",
     "old": "一个喜欢折腾的人",
-    "content": "主要研究 QQ 机器人（需要拉群可以联系我），小米穿戴设备（米坛社区）和小米的一些东西等 🤖📱"
+    "content": "主要研究 QQ 机器人（需要拉群可以联系我），小米穿戴设备（米坛社区）和小米的一些东西等 "
   },
   "skills": {
     "title": "技能"
@@ -18,15 +18,15 @@
     "title": "项目",
     "project1": {
       "name": "叹号 Bot",
-      "desc": "基于 NoneBot2 的 QQ 机器人，提供多种实用功能"
+      "desc": "参考文档 https://docs.th-dd.top"
     },
     "project2": {
       "name": "Nova Bot",
-      "desc": "另一个 QQ 机器人项目"
+      "desc": "参考文档 https://docs.th-dd.top"
     },
     "project3": {
       "name": "个人文档站",
-      "desc": "记录各种折腾笔记和项目文档"
+      "desc": "记录各种折腾笔记和项目文档 https://docs.th-dd.top"
     }
   },
   "time": {
