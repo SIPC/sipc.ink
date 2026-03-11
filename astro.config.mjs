@@ -8,5 +8,5 @@ import studiocmsUi from '@studiocms/ui';
 export default defineConfig({
   output: "static",
   integrations: [studiocmsUi()],
-  site: "https://th-dd.github.io"
+  site: "https://www.th-dd.top"
 });
