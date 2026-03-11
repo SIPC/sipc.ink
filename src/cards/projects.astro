@@ -6,24 +6,54 @@ const { t } = useTastro(Astro.request)
 ---
 
 <Card style="width: 100%; height: 100%;">
-    <h4 slot="header">🛠️ {t("projects.title")}</h4>
-    <div style="display: flex; flex-direction: column; gap: 8px; height: 100%;">
-        <Card style="width: 100%;">
-            <h5 slot="header">
-                <a href="https://github.com/Lyrify-Cloud/Lyrify-Translator" style="color: #ffffff; text-decoration: none;">{t("projects.lyrify_translator.name")}</a>
-            </h5>
-            <p style="font-size: 13px; color: #a1a1aa; margin: 0; line-height: 1.4;">
-                {t("projects.lyrify_translator.desc")}
+    
+<h4 slot="header">🛠️ {t("projects.title")}</h4>
+    
+<div style="display: flex; flex-direction: column; gap: 8px; height: 100%;">
+        
+<Card style="width: 100%;">
+            
+<h5 slot="header">
+                
+<a href="https://docs.th-dd.top/thbot-commads.html" style="color: #ffffff; text-decoration: none;">{t("projects.project1.name")}</a>
+            
+</h5>
+            
+<p style="font-size: 13px; color: #a1a1aa; margin: 0; line-height: 1.4;">
+                {t("projects.project1.desc")}
             </p>
-        </Card>
+        
+</Card>
 
-        <Card style="width: 100%;">
-            <h5 slot="header">
-                <a href="https://github.com/SIPC/Lyrify-expand" style="color: #ffffff; text-decoration: none;">{t("projects.lyrify_expand.name")}</a>
-            </h5>
-            <p style="font-size: 13px; color: #a1a1aa; margin: 0; line-height: 1.4;">
-                {t("projects.lyrify_expand.desc")}
+        
+<Card style="width: 100%;">
+            
+<h5 slot="header">
+                
+<a href="https://docs.th-dd.top/nobot-commads.html" style="color: #ffffff; text-decoration: none;">{t("projects.project2.name")}</a>
+            
+</h5>
+            
+<p style="font-size: 13px; color: #a1a1aa; margin: 0; line-height: 1.4;">
+                {t("projects.project2.desc")}
             </p>
-        </Card>
-    </div>
+        
+</Card>
+
+        
+<Card style="width: 100%;">
+            
+<h5 slot="header">
+                
+<a href="https://docs.th-dd.top" style="color: #ffffff; text-decoration: none;">{t("projects.project3.name")}</a>
+            
+</h5>
+            
+<p style="font-size: 13px; color: #a1a1aa; margin: 0; line-height: 1.4;">
+                {t("projects.project3.desc")}
+            </p>
+        
+</Card>
+    
+</div>
 </Card>

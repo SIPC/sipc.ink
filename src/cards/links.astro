@@ -10,12 +10,26 @@ const { t } = useTastro(Astro.request)
 
 <Card style="width: 100%; height: 100%;">
     <h4 slot="header">🔗 {t("links.title")}</h4>
-    <div style="display: flex; gap: 10px;">
-        <Button color="default" variant="outlined" target="_blank" as="a" href="https://github.com/SIPC" style="padding: 12px; border-radius: 12px;">
+    
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <Button color="default" variant="outlined" target="_blank" as="a" href="https://github.com/th-dd" style="padding: 12px; border-radius: 12px;">
             <Github />
         </Button>
+        
         <Button color="default" variant="outlined" target="_blank" as="a" href="https://space.bilibili.com/1564506743" style="padding: 12px; border-radius: 12px;">
             <Bilibili />
+        </Button>
+
+        <Button color="default" variant="outlined" target="_blank" as="a" href="https://qm.qq.com/q/jvHsCgdhg4" style="padding: 12px; border-radius: 12px; font-size: 12px;">
+            QQ
+        </Button>
+
+        <Button color="default" variant="outlined" target="_blank" as="a" href="https://docs.th-dd.top" style="padding: 12px; border-radius: 12px; font-size: 12px;">
+            📚 Docs
+        </Button>
+
+        <Button color="default" variant="outlined" target="_blank" as="a" href="https://sys.th-dd.top" style="padding: 12px; border-radius: 12px; font-size: 12px;">
+            📊 Status
         </Button>
     </div>
 </Card>
