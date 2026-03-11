@@ -1,12 +1,12 @@
 {
   "profile": {
-    "name": "sipc.ink",
-    "description": "Quietly making waves."
+    "name": "thdd",
+    "description": "You can also call me TanHao"
   },
   "about": {
     "title": "About Me",
-    "old": "An idle vocational student",
-    "content": "Interested in electronics & programming, love to take things apart and explore. Prefer the process and results over titles."
+    "old": "A person who loves to tinker",
+    "content": "Mainly researching QQ bots (contact me if you need to create a group), Xiaomi wearables (Mitao Community), and other Xiaomi stuff 🤖📱"
   },
   "skills": {
     "title": "Skills"
@@ -16,20 +16,24 @@
   },
   "projects": {
     "title": "Projects",
-    "lyrify_translator": {
-      "name": "Lyrify Translator",
-      "desc": "A translation tool based on LLM, supporting multi-language translation with multiple engines."
+    "project1": {
+      "name": "TanHao Bot",
+      "desc": "A QQ bot based on NoneBot2 with various practical features"
     },
-    "lyrify_expand": {
-      "name": "Lyrify expand",
-      "desc": "Reverse proxy node for Lyrify Translator."
+    "project2": {
+      "name": "Nova Bot",
+      "desc": "Another QQ bot project"
+    },
+    "project3": {
+      "name": "Personal Docs",
+      "desc": "Documenting various tinkering notes and project documentation"
     }
   },
   "time": {
     "title": "Local Time"
   },
   "footer": {
-    "site": "sipc.ink",
+    "site": "th-dd.top",
     "font": "MiSans"
   }
 }
