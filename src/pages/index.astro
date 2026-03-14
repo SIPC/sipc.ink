@@ -8,8 +8,6 @@ import Skills from "../cards/skills.astro";
 import Projects from "../cards/projects.astro";
 
 import { initTastro, useTastro } from "@sipc.ink/tastro"
-import fs from "node:fs";
-import { fileURLToPath } from "node:url";
 
 initTastro({
   defaultLang: "en",
@@ -20,8 +18,7 @@ initTastro({
 })
 
 const { t, lang} = useTastro(Astro.request)
-const bgPath = fileURLToPath(new URL("../../public/bg.png", import.meta.url));
-const bgExists = fs.existsSync(bgPath);
+const bgExists = __BG_EXISTS__;
 
 ---
 
