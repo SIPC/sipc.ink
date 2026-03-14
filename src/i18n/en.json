@@ -9,21 +9,38 @@
     "content": "Interested in electronics & programming, love to take things apart and explore. Prefer the process and results over titles."
   },
   "skills": {
-    "title": "Skills"
+    "title": "Skills",
+    "items": ["NodeJS", "Python", "Astro", "JavaScript", "HTML", "CSS", "Docker"]
   },
   "links": {
-    "title": "Links"
+    "title": "Links",
+    "items": [
+      {
+        "id": "github",
+        "label": "GitHub",
+        "url": "https://github.com/SIPC"
+      },
+      {
+        "id": "bilibili",
+        "label": "Bilibili",
+        "url": "https://space.bilibili.com/1564506743"
+      }
+    ]
   },
   "projects": {
     "title": "Projects",
-    "lyrify_translator": {
-      "name": "Lyrify Translator",
-      "desc": "A translation tool based on LLM, supporting multi-language translation with multiple engines."
-    },
-    "lyrify_expand": {
-      "name": "Lyrify expand",
-      "desc": "Reverse proxy node for Lyrify Translator."
-    }
+    "items": [
+      {
+        "name": "Lyrify Translator",
+        "desc": "A translation tool based on LLM, supporting multi-language translation with multiple engines.",
+        "url": "https://github.com/Lyrify-Cloud/Lyrify-Translator"
+      },
+      {
+        "name": "Lyrify expand",
+        "desc": "Reverse proxy node for Lyrify Translator.",
+        "url": "https://github.com/SIPC/Lyrify-expand"
+      }
+    ]
   },
   "time": {
     "title": "Local Time"

@@ -5,17 +5,37 @@ import Github from "../assets/icon/github.svg";
 import Bilibili from "../assets/icon/bilibili.svg";
 
 import { useTastro } from "@sipc.ink/tastro"
-const { t } = useTastro(Astro.request)
+import { getDict } from "../tool/getDict.js";
+
+const { lang } = useTastro(Astro.request)
+const dict = await getDict(lang);
+const links = dict.links ?? {};
+const items = links.items ?? [];
+const iconMap = {
+    github: Github,
+    bilibili: Bilibili,
+};
 ---
 
 <Card style="width: 100%; height: 100%;">
-    <h4 slot="header">🔗 {t("links.title")}</h4>
+    <h4 slot="header">🔗 {links.title}</h4>
     <div style="display: flex; gap: 10px;">
-        <Button color="default" variant="outlined" target="_blank" as="a" href="https://github.com/SIPC" style="padding: 12px; border-radius: 12px;">
-            <Github />
-        </Button>
-        <Button color="default" variant="outlined" target="_blank" as="a" href="https://space.bilibili.com/1564506743" style="padding: 12px; border-radius: 12px;">
-            <Bilibili />
-        </Button>
+        {items.map((item) => {
+            const Icon = iconMap[item.id];
+            return (
+                <Button
+                    color="default"
+                    variant="outlined"
+                    target="_blank"
+                    as="a"
+                    href={item.url}
+                    aria-label={item.label}
+                    title={item.label}
+                    style="padding: 12px; border-radius: 12px;"
+                >
+                    {Icon ? <Icon /> : item.label}
+                </Button>
+            );
+        })}
     </div>
 </Card>

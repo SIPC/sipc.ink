@@ -2,11 +2,15 @@
 import { Card } from "studiocms:ui/components/card";
 
 import { useTastro } from "@sipc.ink/tastro"
-const { t,lang } = useTastro(Astro.request)
+import { getDict } from "../tool/getDict.js";
+
+const { lang } = useTastro(Astro.request)
+const dict = await getDict(lang);
+const time = dict.time ?? {};
 ---
 
 <Card style="width: 100%;">
-    <h4 slot="header">🕒 {t("time.title")}</h4>
+    <h4 slot="header">🕒 {time.title}</h4>
     <div style="border-radius: 12px; background: rgba(0, 0, 0, 0.04); text-align: center;" id="time-card" data-lang={lang}>
         <div id="date" style="font-size: 15px; opacity: 0.6; margin-bottom: 3px;">-</div>
         <div id="clock" style="font-size: 28px; font-weight: 500; letter-spacing: 0.1em; transition: opacity 0.25s ease;">00:00:00</div>

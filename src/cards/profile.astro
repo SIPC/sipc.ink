@@ -4,10 +4,14 @@ import { User } from "studiocms:ui/components/user";
 import ProfileImage from "../../public/avatar.jpg";
 
 import { useTastro } from "@sipc.ink/tastro"
-const { t } = useTastro(Astro.request)
+import { getDict } from "../tool/getDict.js";
+
+const { lang } = useTastro(Astro.request)
+const dict = await getDict(lang);
+const profile = dict.profile ?? {};
 ---
 
 <Card style="width: 100%; min-height: 80px; display: flex; align-items: center; justify-content: center;">
-    <User name={t("profile.name")} description={t("profile.description")} avatar={ProfileImage} />
+    <User name={profile.name} description={profile.description} avatar={ProfileImage} />
 </Card>
     

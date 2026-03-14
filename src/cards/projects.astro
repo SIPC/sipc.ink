@@ -2,28 +2,26 @@
 import { Card } from "studiocms:ui/components/card";
 
 import { useTastro } from "@sipc.ink/tastro"
-const { t } = useTastro(Astro.request)
+import { getDict } from "../tool/getDict.js";
+
+const { lang } = useTastro(Astro.request)
+const dict = await getDict(lang);
+const projects = dict.projects ?? {};
+const items = projects.items ?? [];
 ---
 
 <Card style="width: 100%; height: 100%;">
-    <h4 slot="header">🛠️ {t("projects.title")}</h4>
+    <h4 slot="header">🛠️ {projects.title}</h4>
     <div style="display: flex; flex-direction: column; gap: 8px; height: 100%;">
-        <Card style="width: 100%;">
-            <h5 slot="header">
-                <a href="https://github.com/Lyrify-Cloud/Lyrify-Translator" style="color: #ffffff; text-decoration: none;">{t("projects.lyrify_translator.name")}</a>
-            </h5>
-            <p style="font-size: 13px; color: #a1a1aa; margin: 0; line-height: 1.4;">
-                {t("projects.lyrify_translator.desc")}
-            </p>
-        </Card>
-
-        <Card style="width: 100%;">
-            <h5 slot="header">
-                <a href="https://github.com/SIPC/Lyrify-expand" style="color: #ffffff; text-decoration: none;">{t("projects.lyrify_expand.name")}</a>
-            </h5>
-            <p style="font-size: 13px; color: #a1a1aa; margin: 0; line-height: 1.4;">
-                {t("projects.lyrify_expand.desc")}
-            </p>
-        </Card>
+        {items.map((project) => (
+            <Card style="width: 100%;">
+                <h5 slot="header">
+                    <a href={project.url} style="color: #ffffff; text-decoration: none;">{project.name}</a>
+                </h5>
+                <p style="font-size: 13px; color: #a1a1aa; margin: 0; line-height: 1.4;">
+                    {project.desc}
+                </p>
+            </Card>
+        ))}
     </div>
 </Card>

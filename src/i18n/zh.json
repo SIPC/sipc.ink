@@ -9,21 +9,38 @@
     "content": "对 电子产品&编程 感兴趣，喜欢把东西拆开研究，也乐意慢慢把想法做出来。比起头衔，更在意过程和结果。"
   },
   "skills": {
-    "title": "技能"
+    "title": "技能",
+    "items": ["NodeJS", "Python", "Astro", "JavaScript", "HTML", "CSS", "Docker"]
   },
   "links": {
-    "title": "链接"
+    "title": "链接",
+    "items": [
+      {
+        "id": "github",
+        "label": "GitHub",
+        "url": "https://github.com/SIPC"
+      },
+      {
+        "id": "bilibili",
+        "label": "哔哩哔哩",
+        "url": "https://space.bilibili.com/1564506743"
+      }
+    ]
   },
   "projects": {
     "title": "项目",
-    "lyrify_translator": {
-      "name": "Lyrify Translator",
-      "desc": "一款基于大模型的翻译工具，支持多语言互译，提供多种翻译引擎。"
-    },
-    "lyrify_expand": {
-      "name": "Lyrify expand",
-      "desc": "Lyrify Translator 配套逆向节点。"
-    }
+    "items": [
+      {
+        "name": "Lyrify Translator",
+        "desc": "一款基于大模型的翻译工具，支持多语言互译，提供多种翻译引擎。",
+        "url": "https://github.com/Lyrify-Cloud/Lyrify-Translator"
+      },
+      {
+        "name": "Lyrify expand",
+        "desc": "Lyrify Translator 配套逆向节点。",
+        "url": "https://github.com/SIPC/Lyrify-expand"
+      }
+    ]
   },
   "time": {
     "title": "所在地时间"

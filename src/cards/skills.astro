@@ -3,18 +3,19 @@ import { Card } from "studiocms:ui/components/card";
 import { Badge } from "studiocms:ui/components/badge";
 
 import { useTastro } from "@sipc.ink/tastro"
-const { t } = useTastro(Astro.request)
+import { getDict } from "../tool/getDict.js";
+
+const { lang } = useTastro(Astro.request)
+const dict = await getDict(lang);
+const skills = dict.skills ?? {};
+const items = skills.items ?? [];
 ---
 
 <Card style="width: 100%; height: 100%;">
-    <h4 slot="header">⚡ {t("skills.title")}</h4>
+    <h4 slot="header">⚡ {skills.title}</h4>
     <span style="display: inline-flex; flex-wrap: wrap; gap: 8px;">
-        <Badge label="NodeJS" color="mono" variant="flat"/>
-        <Badge label="Python" color="mono" variant="flat"/>
-        <Badge label="Astro" color="mono" variant="flat"/>
-        <Badge label="JavaScript" color="mono" variant="flat"/>
-        <Badge label="HTML" color="mono" variant="flat"/>
-        <Badge label="CSS" color="mono" variant="flat"/>
-        <Badge label="Docker" color="mono" variant="flat"/>
+        {items.map((label) => (
+            <Badge label={label} color="mono" variant="flat"/>
+        ))}
     </span>
 </Card>
