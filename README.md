@@ -64,20 +64,41 @@ src/i18n/
   "about": {
     "title": "关于我",
     "old": "一个无所事事的 fvv 职高生",
-    "content": "对 电子产品&编程 感兴趣..."
+    "content": "对 电子产品&编程 感兴趣，喜欢把东西拆开研究，也乐意慢慢把想法做出来。比起头衔，更在意过程和结果。"
   },
   "skills": {
-    "title": "技能"
+    "title": "技能",
+    "items": ["NodeJS", "Python", "Astro", "JavaScript", "HTML", "CSS", "Docker"]
   },
   "links": {
-    "title": "链接"
+    "title": "链接",
+    "items": [
+      {
+        "id": "github",
+        "label": "GitHub",
+        "url": "https://github.com/SIPC"
+      },
+      {
+        "id": "bilibili",
+        "label": "哔哩哔哩",
+        "url": "https://space.bilibili.com/1564506743"
+      }
+    ]
   },
   "projects": {
     "title": "项目",
-    "lyrify_translator": {
-      "name": "Lyrify Translator",
-      "desc": "一款基于大模型的翻译工具..."
-    }
+    "items": [
+      {
+        "name": "Lyrify Translator",
+        "desc": "一款基于大模型的翻译工具，支持多语言互译，提供多种翻译引擎。",
+        "url": "https://github.com/Lyrify-Cloud/Lyrify-Translator"
+      },
+      {
+        "name": "Lyrify expand",
+        "desc": "Lyrify Translator 配套逆向节点。",
+        "url": "https://github.com/SIPC/Lyrify-expand"
+      }
+    ]
   },
   "time": {
     "title": "所在地时间"
@@ -87,7 +108,11 @@ src/i18n/
     "font": "MiSans"
   }
 }
+
 ```
+
+**内容自动生成：**  
+页面卡片内容（个人资料、关于我、技能、链接、项目、时间、页脚）均从 `src/i18n/*.json` 读取并自动渲染，修改 JSON 即可更新，无需手动改卡片组件。
 
 **添加新语言：**
 1. 在 `src/i18n/` 目录下创建新的 JSON 文件（如 `ja.json`）
@@ -96,17 +121,17 @@ src/i18n/
 
 ## 📝 自定义内容
 
-### 修改个人资料
-编辑 `src/cards/profile.astro`
+### 修改文案/数据（自动生成）
+编辑 `src/i18n/zh.json` 或 `src/i18n/en.json`，对应卡片内容会自动渲染更新。
 
-### 更新技能标签
-编辑 `src/cards/skills.astro`
-
-### 添加项目
-编辑 `src/cards/projects.astro`
-
-### 修改社交链接
-编辑 `src/cards/links.astro`
+### 调整卡片布局/样式
+- `src/cards/profile.astro`
+- `src/cards/about.astro`
+- `src/cards/skills.astro`
+- `src/cards/links.astro`
+- `src/cards/projects.astro`
+- `src/cards/time.astro`
+- `src/cards/footer.astro`
 
 ### 自定义布局宽度
 编辑 `src/pages/index.astro`：

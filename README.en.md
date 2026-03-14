@@ -59,35 +59,60 @@ src/i18n/
 {
   "profile": {
     "name": "sipc.ink",
-    "description": "Quietly making waves."
+    "description": "不喧哗，自有声。"
   },
   "about": {
-    "title": "About Me",
-    "old": "An idle vocational student",
-    "content": "Interested in electronics & programming, love to take things apart and explore..."
+    "title": "关于我",
+    "old": "一个无所事事的 fvv 职高生",
+    "content": "对 电子产品&编程 感兴趣，喜欢把东西拆开研究，也乐意慢慢把想法做出来。比起头衔，更在意过程和结果。"
   },
   "skills": {
-    "title": "Skills"
+    "title": "技能",
+    "items": ["NodeJS", "Python", "Astro", "JavaScript", "HTML", "CSS", "Docker"]
   },
   "links": {
-    "title": "Links"
+    "title": "链接",
+    "items": [
+      {
+        "id": "github",
+        "label": "GitHub",
+        "url": "https://github.com/SIPC"
+      },
+      {
+        "id": "bilibili",
+        "label": "哔哩哔哩",
+        "url": "https://space.bilibili.com/1564506743"
+      }
+    ]
   },
   "projects": {
-    "title": "Projects",
-    "lyrify_translator": {
-      "name": "Lyrify Translator",
-      "desc": "A translation tool based on LLM..."
-    }
+    "title": "项目",
+    "items": [
+      {
+        "name": "Lyrify Translator",
+        "desc": "一款基于大模型的翻译工具，支持多语言互译，提供多种翻译引擎。",
+        "url": "https://github.com/Lyrify-Cloud/Lyrify-Translator"
+      },
+      {
+        "name": "Lyrify expand",
+        "desc": "Lyrify Translator 配套逆向节点。",
+        "url": "https://github.com/SIPC/Lyrify-expand"
+      }
+    ]
   },
   "time": {
-    "title": "Local Time"
+    "title": "所在地时间"
   },
   "footer": {
     "site": "sipc.ink",
     "font": "MiSans"
   }
 }
+
 ```
+
+**Auto-generated content:**  
+All card content (profile, about, skills, links, projects, time, footer) is rendered from `src/i18n/*.json`. Update the JSON to refresh the UI—no need to edit the card components for text/data.
 
 **Adding a new language:**
 1. Create a new JSON file in the `src/i18n/` directory (e.g., `ja.json`)
@@ -96,17 +121,17 @@ src/i18n/
 
 ## 📝 Customization
 
-### Modify Profile
-Edit `src/cards/profile.astro`
+### Update text/data (auto-generated)
+Edit `src/i18n/zh.json` or `src/i18n/en.json` and the cards will update automatically.
 
-### Update Skill Tags
-Edit `src/cards/skills.astro`
-
-### Add Projects
-Edit `src/cards/projects.astro`
-
-### Modify Social Links
-Edit `src/cards/links.astro`
+### Adjust card layout/styles
+- `src/cards/profile.astro`
+- `src/cards/about.astro`
+- `src/cards/skills.astro`
+- `src/cards/links.astro`
+- `src/cards/projects.astro`
+- `src/cards/time.astro`
+- `src/cards/footer.astro`
 
 ### Customize Layout Width
 Edit `src/pages/index.astro`:

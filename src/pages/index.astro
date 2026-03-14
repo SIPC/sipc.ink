@@ -8,6 +8,8 @@ import Skills from "../cards/skills.astro";
 import Projects from "../cards/projects.astro";
 
 import { initTastro, useTastro } from "@sipc.ink/tastro"
+import fs from "node:fs";
+import { fileURLToPath } from "node:url";
 
 initTastro({
   defaultLang: "en",
@@ -18,6 +20,8 @@ initTastro({
 })
 
 const { t, lang} = useTastro(Astro.request)
+const bgPath = fileURLToPath(new URL("../../public/bg.png", import.meta.url));
+const bgExists = fs.existsSync(bgPath);
 
 ---
 
@@ -30,7 +34,7 @@ const { t, lang} = useTastro(Astro.request)
     <meta name="generator" content={Astro.generator} />
     <title>{t("profile.name")}</title>
   </head>
-<body>
+<body class:list={{ "bg-on": bgExists }}>
   <main style="min-height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center; padding: 16px;">
     <div class="outer-grid" style="max-width: 730px; width: 100%; display: grid; gap: 8px;">
       <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -71,6 +75,21 @@ const { t, lang} = useTastro(Astro.request)
     color: #ffffff;
     margin: 0;
     padding: 0;
+  }
+  body.bg-on {
+    background-image: url("/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  :global(body.bg-on .sui-card) {
+    background-color: rgba(15, 15, 15, 0.6);
+    backdrop-filter: blur(10px) saturate(120%);
+    -webkit-backdrop-filter: blur(10px) saturate(120%);
+    border: none;
+  }
+  :global(body.bg-on .sui-card.filled) {
+    background-color: rgba(15, 15, 15, 0.6);
   }
   .outer-grid {
     grid-template-columns: 1fr;
