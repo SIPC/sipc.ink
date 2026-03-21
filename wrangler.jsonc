@@ -1,16 +1,16 @@
 {
-  "main": "@astrojs/cloudflare/entrypoints/server",
+	"main": "@astrojs/cloudflare/entrypoints/server",
 	"name": "ink",
-  "compatibility_date": "2026-01-04",
-  "compatibility_flags": [
-    "nodejs_compat",
-    "global_fetch_strictly_public"
-  ],
+	"compatibility_date": "2026-01-04",
+	"compatibility_flags": [
+		"nodejs_compat",
+		"global_fetch_strictly_public"
+	],
 	"assets": {
 		"binding": "ASSETS",
 		"directory": "./dist"
 	},
 	"observability": {
-    "enabled": true
-  }
+		"enabled": true
+	}
 }
