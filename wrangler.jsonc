@@ -1,4 +1,5 @@
 {
+  "main": "@astrojs/cloudflare/entrypoints/server",
 	"name": "ink",
   "compatibility_date": "2026-01-04",
   "compatibility_flags": [
