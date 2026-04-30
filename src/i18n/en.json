@@ -31,14 +31,14 @@
     "title": "Projects",
     "items": [
       {
+        "name": "H2O",
+        "desc": "One-stop management for your Hysteria2 nodes.",
+        "url": "https://github.com/SIPC/H2O"
+      },
+      {
         "name": "Lyrify Translator",
         "desc": "A translation tool based on LLM, supporting multi-language translation with multiple engines.",
         "url": "https://github.com/Lyrify-Cloud/Lyrify-Translator"
-      },
-      {
-        "name": "Lyrify expand",
-        "desc": "Reverse proxy node for Lyrify Translator.",
-        "url": "https://github.com/SIPC/Lyrify-expand"
       }
     ]
   },

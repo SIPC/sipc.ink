@@ -31,14 +31,14 @@
     "title": "项目",
     "items": [
       {
+        "name": "H2O",
+        "desc": "一站式管理你的 Hysteria2 节点。",
+        "url": "https://github.com/SIPC/H2O"
+      },
+      {
         "name": "Lyrify Translator",
         "desc": "一款基于大模型的翻译工具，支持多语言互译，提供多种翻译引擎。",
         "url": "https://github.com/Lyrify-Cloud/Lyrify-Translator"
-      },
-      {
-        "name": "Lyrify expand",
-        "desc": "Lyrify Translator 配套逆向节点。",
-        "url": "https://github.com/SIPC/Lyrify-expand"
       }
     ]
   },
